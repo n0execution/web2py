@@ -1,9 +1,9 @@
 {{extend 'layout.html'}}
-<center>
-<br/>
-<br/>
-<h1>check a pulse</h1>
-<h4>Just another Sentiment Analysis tool.</h4>
-<br/>
-<p>{{=form}}</p>
-</center>
+<h1>check your pulse</h1>
+<form>
+<input type="text" id="sentiment" name ="sentiment">
+<input type="button" value="submit"
+onclick="ajax('{{=URL('pulse')}}',['sentiment'],'target')">
+</form>
+<br>
+<div id="target"></div>

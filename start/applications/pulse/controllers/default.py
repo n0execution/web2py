@@ -9,14 +9,15 @@ def index():
     return dict(form=form)
 
 
-def pulser():
-    text = request.args(0)
-    text = text.split('_')
-    text = ' '.join(text)
-    url = 'http://text-processing.com/api/sentiment/'
-    data = {'text': text}
-    r = requests.post(url, data=data)
-    binary = r.content
-    output = json.loads(binary)
-    label = output["label"]
-    return dict(text=text, label=label)
+def pulse():
+    session.m=[]
+    if request.vars.sentiment:
+        text = request.vars.sentiment
+        text = text.split('_')
+        text = ' '.join(text)
+        url = 'http://text-processing.com/api/sentiment/'
+        data = {'text': text}
+        r = requests.post(url, data=data)
+        session.m.append(r.content)
+    session.m.sort()
+    return text, TABLE(*[TR(v) for v in session.m]).xml()
