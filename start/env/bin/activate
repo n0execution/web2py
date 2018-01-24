@@ -40,7 +40,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/kotik/git/RealPython/web2py/start/env"
+VIRTUAL_ENV="/home/kotik/git/web2py/start/env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
