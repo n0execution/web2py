@@ -6,7 +6,7 @@ def index():
 
 def grab_movies():
     session.m = []
-    YOUR_OWN_KEY = 'GET_YOUR_OWN_KEY'
+    YOUR_OWN_KEY = 'abha3gx3p42czdrswkejmyxm'
     url = requests.get("http://api.rottentomatoes.com/api/public/v1.0/" + "lists/movies/in_theaters.json?apikey={}".format(YOUR_OWN_KEY))
     binary = url.content
     output = json.loads(binary)
