@@ -9,17 +9,17 @@
 ## - call exposes all registered services (none by default)
 #########################################################################
 
-
+@auth.requires_login()
 def index():
-    """
-    example action using the internationalization operator T and flash
-    rendered by views/default/index.html or views/generic.html
-
-    if you need a simple wiki simply replace the two lines below with:
-    return auth.wiki()
-    """
-    response.flash = T("Welcome to web2py!")
-    return dict(message=T('Hello World'))
+    form=SQLFORM(db.blog_posts)
+    if form.process().accepted:
+        response.flash = "Post accepted - cheers!"
+    elif form.errors:
+        response.flash = "Post not accepted - fix the error(s)."
+    else:
+        response.flash = "Please fill out the form - thank you!"
+    posts = db().select(db.blog_posts.ALL)
+    return dict(posts=posts, form=form)
 
 
 def user():

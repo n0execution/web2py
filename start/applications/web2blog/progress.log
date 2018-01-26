@@ -1,2 +1,5 @@
 [2018-01-26 23:35:34] START
 [2018-01-26 23:37:24] EDIT web2blog/models/db.py: 1
+[2018-01-26 23:44:52] EDIT web2blog/controllers/default.py: 1
+[2018-01-26 23:46:18] EDIT web2blog/views/default/index.html: -21
+[2018-01-26 23:48:55] EDIT web2blog/controllers/default.py: 1
