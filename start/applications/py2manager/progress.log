@@ -1,3 +1,5 @@
 [2018-01-28 19:18:30] START
 [2018-01-28 19:21:03] EDIT py2manager/models/db_tasks.py: 0
 [2018-01-28 19:21:07] EDIT py2manager/models/db_tasks.py: 0
+[2018-01-28 22:45:35] EDIT py2manager/controllers/default.py: -2
+[2018-01-28 23:13:01] EDIT py2manager/views/default/index.html: -20
