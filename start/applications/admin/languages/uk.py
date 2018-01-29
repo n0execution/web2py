@@ -238,6 +238,7 @@
 'internal error: %s': 'внутрішня помилка: %s',
 'Internal State': 'Внутрішній стан',
 'Invalid action': 'Помилкова дія',
+'Invalid application name': 'Invalid application name',
 'invalid circual reference': 'помилкове циклічне посилання',
 'invalid circular reference': 'помилкове циклічне посилання',
 'invalid password': 'неправильний пароль',
