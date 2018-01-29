@@ -23,11 +23,11 @@ db.define_table('project',
 db.project.employee_name.readable = db.project.employee_name.writable = False
 
 
-db.project.start_date.requires = IS_DATE(format=T('%m-%d-%Y'), 
-                                        error_message='Must be MM-DD-YYYY!')
+db.project.start_date.requires = IS_DATE(format=T('%d-%m-%Y'), 
+                                        error_message='Must be DD-MM-YYYY!')
 
-db.project.due_date.requires = IS_DATE(format=T('%m-%d-%Y'), 
-                                        error_message='Must be MM-DD-YYYY!')
+db.project.due_date.requires = IS_DATE(format=T('%d-%m-%Y'), 
+                                        error_message='Must be DD-MM-YYYY!')
 
 
 
@@ -40,6 +40,6 @@ db.define_table('note',
 
 db.note.post_id.readable = db.note.post_id.writable = False
 db.note.created_on.readable = db.note.created_on.writable = False
-db.note.created_on.requires = IS_DATE(format=T('%m-%d-%Y'),
-                                error_message='Must be MM-DD-YYYY!')
+db.note.created_on.requires = IS_DATE(format=T('%d-%m-%Y'),
+                                error_message='Must be DD-MM-YYYY!')
 db.note.created_by.readable = db.note.created_by.writable = False

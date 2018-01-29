@@ -1,4 +1,4 @@
-# coding: utf8
+# coding: utf-8
 {
 '!langcode!': 'uk',
 '!langname!': 'Українська',
@@ -392,6 +392,7 @@
 'skip to generate': 'перейти до генерування результату',
 'some files could not be removed': 'деякі файли не можна вилучити',
 'Sorry, could not find mercurial installed': 'Не вдалось виявити встановлену систему контролю версій Mercurial',
+'source : filesystem': 'source : filesystem',
 'Start a new app': 'Створюється новий додаток',
 'Start searching': 'Розпочати пошук',
 'Start wizard': 'Активувати майстра',
