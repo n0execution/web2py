@@ -89,4 +89,10 @@ def add():
 @auth.requires_login()
 def company():
     company_form = SQLFORM(db.company).process()
-    return dict(company_form=company_form)
+    grid = SQLFORM.grid(db.company, 
+                        create=False, 
+                        deletable=False,
+                        editable=False,
+                        maxtextlength=50, 
+                            orderby=db.company.company_name)
+    return locals()
