@@ -12,7 +12,6 @@
 
 @auth.requires_login()
 def index():
-    project_form = SQLFORM(db.project).process()
     projects = db(db.project).select()
     users = db(db.auth_user).select()
     companies = db(db.company).select()
@@ -71,3 +70,10 @@ def data():
       LOAD('default','data.load',args='tables',ajax=True,user_signature=True)
     """
     return dict(form=crud())
+
+
+
+@auth.requires_login()
+def add():
+    project_form = SQLFORM(db.project).process()
+    return dict(project_form=project_form)
