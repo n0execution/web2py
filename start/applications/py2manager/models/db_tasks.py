@@ -21,3 +21,10 @@ db.define_table('project',
 
 
 db.project.employee_name.readable = db.project.employee_name.writable = False
+
+
+db.project.start_date.requires = IS_DATE(format=T('%m-%d-%Y'), 
+                                        error_message='Must be MM-DD-YYYY!')
+
+db.project.due_date.requires = IS_DATE(format=T('%m-%d-%Y'), 
+                                        error_message='Must be MM-DD-YYYY!')

@@ -12,9 +12,16 @@
 
 @auth.requires_login()
 def index():
-    projects = db(db.project).select()
-    users = db(db.auth_user).select()
-    companies = db(db.company).select()
+    response.flash = T('Welcome!')
+    grid = SQLFORM.grid(db.project, create=False,
+                        fields=[db.project.name, 
+                                db.project.employee_name,
+                                db.project.company_name, 
+                                db.project.start_date,
+                                db.project.due_date, 
+                                db.project.completed], 
+                        deletable=False, 
+                        maxtextlength=50)
     return locals()
 
 

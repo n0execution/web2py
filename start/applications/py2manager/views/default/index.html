@@ -1,10 +1,4 @@
 {{extend 'layout.html'}}
-<h2>Welcome to py2manager</h2>
+<h2>All projects:</h2>
 <br/>
-<h3> All Open Projects </h3>
-<ul>{{for project in projects:}}
-    <li>
-        {{=(project.name)}}
-    </li>
-    {{pass}}
-</ul>
+{{=grid}}
